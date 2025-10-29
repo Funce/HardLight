@@ -10,6 +10,23 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+- type: sourcePort
+  id: Powered
+  name: signal-port-name-powered
+  description: signal-port-description-powered
+
+# Plumbing
+
+- type: sourcePort
+  id: PlumbingOutput
+  name: signal-port-name-plumbing-output
+  description: signal-port-description-plumbing-output
+
+- type: sourcePort
+  id: PlumbingDispenser
+  name: signal-port-name-plumbing-dispenser
+  description: signal-port-description-plumbing-dispenser
+
 # Robotic Arm
 
 - type: sourcePort
@@ -101,6 +118,13 @@
   name: signal-port-name-automation-slot-gas-tank
   description: signal-port-description-automation-slot-gas-tank
 
+# ChemMaster
+
+- type: sourcePort
+  id: AutomationSlotBottles
+  name: signal-port-name-automation-slot-bottles
+  description: signal-port-description-automation-slot-bottles
+
 # Radiation Collector
 
 - type: sourcePort
@@ -121,13 +145,6 @@
   # Fax Machine
 
 - type: sourcePort
-  id: AutomationSlotPaper
-  name: signal-port-name-automation-slot-paper
-  description: signal-port-description-automation-slot-paper
-
-  # Disposal Unit
-
-- type: sourcePort
-  id: DisposalReady
-  name: signal-port-name-ready
-  description: signal-port-description-ready
+  id: Triggered
+  name: signal-port-name-triggered-signaller
+  description: signal-port-description-triggered-signaller

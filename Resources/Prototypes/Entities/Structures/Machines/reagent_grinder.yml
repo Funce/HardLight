@@ -60,6 +60,9 @@
         whitelist:
           components:
           - FitsInDispenser
+    - !type:AutomatedBeakerSlot
+      input: PlumbingDispenser
+      output: PlumbingDispenser
   - type: Machine
     board: ReagentGrinderMachineCircuitboard
   - type: ContainerContainer
@@ -94,6 +97,11 @@
     sprite: Structures/Machines/recycling.rsi
     layers:
       - state: grinder-b0
+  - type: AutomationSlots # Goobstation
+    slots:
+    - !type:AutomatedSolution
+      output: PlumbingOutput
+      solutionName: output
   - type: Machine
     board: ReagentGrinderIndustrialMachineCircuitboard
   - type: GenericVisualizer
