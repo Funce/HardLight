@@ -5,9 +5,9 @@
   description: This is a test item. How did you get ahold of it?!
   suffix: DO NOT MAP
   components:
-  #- type: Contraband
-  #  severity: Class2
-  #  allowedDepartments: [ Security, Command ]
+  - type: Contraband
+    severity: Class2
+    allowedDepartments: [ Security, Command ]
   - type: Sprite
     sprite: _HL/Objects/BorgArmor/physarmor/defaultarmor.rsi
     state: icon
