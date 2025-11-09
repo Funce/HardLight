@@ -35,8 +35,7 @@
   mutuallyExclusiveTraits:
   - Vigor
   speciesBlacklist:
-  - Felinid
-  - Tajaran
+  - Felinid  
   blacklist:
     components:
     - BorgChassis
@@ -200,8 +199,7 @@
   mutuallyExclusiveTraits:
    - Steadfast
   speciesBlacklist:
-   - Felinid
-   - Tajaran
+   - Felinid 
   components:
     - type: SlowOnDamage
       speedModifierThresholds:
@@ -215,8 +213,7 @@
   category: Physical
   cost: 3
   speciesBlacklist:
-    - Felinid
-    - Tajaran
+    - Felinid   
     - Harpy
   components:
     - type: TrapAvoider
@@ -285,8 +282,7 @@
   mutuallyExclusiveTraits:
   - Feeble
   speciesBlacklist:
-  - Felinid
-  - Tajaran
+  - Felinid  
   blacklist:
     components:
     - BorgChassis
