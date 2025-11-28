@@ -1,6 +1,6 @@
- - type: dataset
-     id: DescriptionsCookieFortune
-     values:
+- type: dataset
+  id: DescriptionsCookieFortune
+  values:
   - The end is near... and it's all your fault.
   - We know what you did.
   - Beware.
