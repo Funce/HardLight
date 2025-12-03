@@ -6,7 +6,7 @@
 - type: weightedRandom
   id: RandomThavenMoodDataset
   weights:
-    ThavenMoodsYesAnd: 0.25
-    ThavenMoodsNoAnd: 0.25
-    ThavenMoodsHorny: 0.40
+    ThavenMoodsYesAnd: 0.30
+    ThavenMoodsNoAnd: 0.30
+    ThavenMoodsHorny: 0.30
     ThavenMoodsWildcard: 0.1
