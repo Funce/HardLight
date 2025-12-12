@@ -5,6 +5,67 @@
   name: Urist R McFrog
   suffix: RMC14
   components:
+  - type: Body
+    prototype: Skrell
+    requiredLegs: 2
+  - type: Temperature
+    heatDamageThreshold: 325
+    coldDamageThreshold: 260
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 1.5
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 250
+    sweatHeatRegulation: 500
+    shiveringHeatRegulation: 500
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 2
+  - type: Hunger
+  - type: Icon
+    sprite: _RMC14/Mobs/Skrells/parts.rsi
+    state: full
+  - type: Thirst
+    baseDecayRate: 0.2
+  - type: Carriable
+  - type: Inventory
+    speciesId: skrell
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 5
+  - type: Perishable
+  - type: Damageable
+    damageModifierSet: Skrell
+  - type: TypingIndicator
+    proto: feroxi
+  - type: Internals
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 2.0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: UserInterface
+    interfaces:
+      enum.HumanoidMarkingModifierKey.Key:
+        type: HumanoidMarkingModifierBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+      enum.SurgeryUIKey.Key: # Shitmed
+        type: SurgeryBui
   - type: HumanoidAppearance
     species: Skrell
   - type: Speech
@@ -15,6 +76,10 @@
       Male: RMCMaleSkrell
       Unsexed: RMCMaleSkrell
       Female: RMCFemaleSkrell
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.15 #per second, scales with pressure and other constants.
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:
