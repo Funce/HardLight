@@ -1,6 +1,5 @@
 using Content.Shared.Actions;
 using Content.Shared.Cybernetics;
-using Robust.Shared.GameObjects;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
@@ -22,7 +21,11 @@ namespace Content.Shared.Cybernetics
         public bool OnCooldown = false;
 
         [DataField, AutoNetworkedField]
-        public float CooldownTime = 30f;
+        public float CooldownTime = 5f;
+
+        [DataField, AutoNetworkedField]
+        public float MaxRange = 12f;
+
     }
 }
 public sealed partial class BluespaceShuntEvent : WorldTargetActionEvent

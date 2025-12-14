@@ -942,24 +942,9 @@ public sealed class RoundPersistenceSystem : EntitySystem
     /// </summary>
     private void UpdateExpeditionUIs()
     {
-        var expeditionQuery = AllEntityQuery<SalvageExpeditionDataComponent>();
-        while (expeditionQuery.MoveNext(out var stationUid, out var expeditionComp))
-        {
-            // Update console UIs for this station
-            var consoleQuery = AllEntityQuery<SalvageExpeditionConsoleComponent, UserInterfaceComponent, TransformComponent>();
-            while (consoleQuery.MoveNext(out var consoleUid, out _, out var uiComp, out var xform))
-            {
-                var consoleStation = _station.GetOwningStation(consoleUid, xform);
-
-                // Update consoles on the same station OR consoles on purchased shuttles
-                // (shuttles have their own station entity that's different from expedition data station)
-                if (consoleStation == stationUid || ShouldUpdateShuttleConsole(consoleUid, consoleStation, stationUid))
-                {
-                    var state = GetExpeditionState((stationUid, expeditionComp));
-                    _ui.SetUiState((consoleUid, uiComp), SalvageConsoleUiKey.Expedition, state);
-                }
-            }
-        }
+        // HARDLIGHT: Disable station-driven expedition UI updates.
+        // Consoles manage their own UI via SalvageSystem.UpdateConsole using grid-local data only.
+        return;
     }
 
     /// <summary>
