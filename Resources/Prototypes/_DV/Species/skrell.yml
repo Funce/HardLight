@@ -12,6 +12,10 @@
   maleFirstNames: RMCNamesSkrellFirst
   femaleFirstNames: RMCNamesSkrellFirst
   lastNames: RMCNamesSkrellLast
+  minAge: 120
+  youngAge: 120
+  oldAge: 400
+  maxAge: 500
 
 - type: speciesBaseSprites
   id: MobSkrellSprites
