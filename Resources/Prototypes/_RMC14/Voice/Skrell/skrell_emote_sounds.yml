@@ -11,9 +11,9 @@
       collection: RMCSkrellWarble
 
 - type: emoteSounds
-  parent: [RMCUnisexSkrell]
+  parent: [RMCUnisexSkrell, MaleHuman]
   id: RMCMaleSkrell
 
 - type: emoteSounds
-  parent: [RMCUnisexSkrell]
+  parent: [RMCUnisexSkrell, FemaleHuman]
   id: RMCFemaleSkrell
