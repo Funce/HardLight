@@ -306,6 +306,9 @@
       - HideLabel
   - type: ActivatableUI
     key: enum.IFFConsoleUiKey.Key
+  - type: Anchorable
+    flags:
+    - Unanchorable 
   - type: UserInterface
     interfaces:
         enum.IFFConsoleUiKey.Key:
@@ -313,7 +316,7 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: Computer
-    board: ComputerIFFSyndicateCircuitboard
+    board: ComputerIFFCircuitboard
 
 - type: entity
   parent: BaseComputerAiAccess
