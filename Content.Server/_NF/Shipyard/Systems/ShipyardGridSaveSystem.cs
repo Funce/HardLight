@@ -640,6 +640,8 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             "UserInterface", // Contains invalid EntityUid references
             "Docking", // Contains invalid EntityUid references to docked entities
             "ActionGrant", // Contains invalid EntityUid references to granted actions
+            "ContainerFill", // Container fill component
+            "Forensics", // Forensics component
         };
 
         // Prototype-level exclusions for obvious non-ship entities.
