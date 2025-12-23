@@ -1,13 +1,8 @@
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Ilya246
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Base
 
 - type: entity
   id: BallisticArtilleryBase
+  parent: ConstructibleMachine #HL
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -98,6 +93,7 @@
 
 - type: entity
   id: BallisticArtilleryBaseCartridge
+  parent: ConstructibleMachine #HL
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -192,6 +188,7 @@
 
 - type: entity
   id: BallisticArtilleryBaseMagazine
+  parent: ConstructibleMachine #HL
   abstract: true
   placement:
     mode: SnapgridCenter

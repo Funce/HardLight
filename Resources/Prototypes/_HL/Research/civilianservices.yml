@@ -8,6 +8,20 @@
     state: pumpManualValve
   discipline: CivilianServices
   tier: 1
-  cost: 5000
+  cost: 7500
   recipeUnlocks:
   - PlumbingAssemblyRecipe
+  - PlumbingPumpCircuitboard
+
+- type: technology
+  id: BulkLiquidStorage
+  name: research-technology-bulk-liquid-storage
+  icon:
+    sprite: _HL/Objects/Tools/bluespacebarrel.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - BluespaceBarrel
+  - BluespaceBucket

@@ -32,7 +32,7 @@
 
 - type: marking
   id: SynthEyesGlow
-  bodyPart: Eyes
+  bodyPart: Head
   markingCategory: Head
   speciesRestriction: [ Synth ]
   sprites:
@@ -42,10 +42,84 @@
     
 # alternate snout
 
-# horns
+# antennae
 
-# horns with lights
+- type: marking
+  id: SynthAntennaCurl
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_curl
+- type: marking
+  id: SynthAntennaSharp
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_sharp
+- type: marking
+  id: SynthAntennaShort
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_short
+- type: marking
+  id: SynthAntennaSlash
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_slash
+- type: marking
+  id: SynthAntennaThick
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_thick
+- type: marking
+  id: SynthAntennaTwin
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_twin
 
-# Chest
+# antennae with lights
 
-# Chest w/ Lights
+- type: marking
+  id: SynthAntennaSharpLight
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_sharp_light
+- type: marking
+  id: SynthAntennaThickLight
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_thick_light
+- type: marking
+  id: SynthAntennaTwinLight
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/antennae.rsi
+    state: synth_antenna_twin_light
+
+# chest
+
+# chest with lights

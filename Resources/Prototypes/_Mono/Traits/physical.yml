@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Avalon
-# SPDX-FileCopyrightText: 2025 ark1368
-#
-# SPDX-License-Identifier: MPL-2.0
-
 - type: trait
   id: PrybarProsthetics
   name: trait-prybar-prosthetics-name
@@ -109,8 +103,8 @@
   description: trait-thieving-desc
   category: Physical
   cost: 3
-  speciesBlacklist:
-  - Felinid
+  ##speciesBlacklist:
+  ##- Felinid
   components:
   - type: Thieving
     stealthy: true
@@ -219,6 +213,19 @@
   components:
     - type: TrapAvoider
 
+
+- type: trait
+  id: PsionicallyGifted
+  name: trait-psionically-gifted-name
+  description: trait-psionically-gifted-desc
+  category: Physical
+  cost: 6
+  speciesBlacklist:
+    - IPC
+  components:
+    - type: PsionicBonusChance
+      flatBonus: 1
+
 - type: trait
   id: SelfAware
   name: trait-self-aware-name
@@ -311,15 +318,15 @@
           Slash: 1.5
           Piercing: 1.5
 
-- type: trait
-  id: Ironman
-  name: trait-ironman-name
-  description: trait-ironman-desc
-  category: Physical
-  cost: -5 # This shit was FREE for factions practically
-  components:
-  - type: Ironman
-  traitGear: SpaceCash10000
+#- type: trait
+#  id: Ironman
+#  name: trait-ironman-name
+#  description: trait-ironman-desc
+#  category: Physical
+#  cost: -5 # This shit was FREE for factions practically
+#  components:
+#  - type: Ironman
+#  traitGear: SpaceCash10000
 
 - type: trait
   id: TemperatureTolerance

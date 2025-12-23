@@ -1,13 +1,3 @@
-// SPDX-FileCopyrightText: 2024 Checkraze
-// SPDX-FileCopyrightText: 2024 Whatstone
-// SPDX-FileCopyrightText: 2024 checkraze
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Dvir
-// SPDX-FileCopyrightText: 2025 Redrover1760
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: MPL-2.0
-
 using System.Threading;
 using Content.Server.Preferences.Managers;
 using Content.Server.GameTicking;
@@ -238,6 +228,72 @@ public sealed partial class BankSystem : SharedBankSystem
         _prefsManager.SetProfile(session.UserId, index, newProfile);
         // Update any active admin UI with new balance
         RaiseLocalEvent(new BalanceChangedEvent(session, newBalance.Value));
+        return true;
+    }
+
+    /// <summary>
+    /// Forces a withdrawal from a character's bank account, allowing the balance to go negative (into debt).
+    /// This should only be used in special cases where debt is acceptable (e.g., ship loading).
+    /// </summary>
+    /// <param name="mobUid">The UID that the bank account is attached to, typically the player controlled mob</param>
+    /// <param name="amount">The integer amount to decrease the bank account by</param>
+    /// <returns>true if the transaction was successful, false if it was not</returns>
+    public bool TryBankWithdrawAllowDebt(EntityUid mobUid, int amount)
+    {
+        if (amount <= 0)
+        {
+            _log.Info($"TryBankWithdrawAllowDebt: {amount} is invalid");
+            return false;
+        }
+
+        if (!TryComp<BankAccountComponent>(mobUid, out var bank))
+        {
+            _log.Info($"TryBankWithdrawAllowDebt: {mobUid} has no bank account");
+            return false;
+        }
+
+        // Mono
+        if (HasComp<IronmanComponent>(mobUid))
+        {
+            _log.Info($"TryBankWithdrawAllowDebt: {mobUid} is blocked from withdrawals (Ironman)");
+            return false;
+        }
+
+        if (!_playerManager.TryGetSessionByEntity(mobUid, out var session))
+        {
+            _log.Info($"TryBankWithdrawAllowDebt: {mobUid} has no attached session");
+            return false;
+        }
+
+        if (!_prefsManager.TryGetCachedPreferences(session.UserId, out var prefs))
+        {
+            _log.Info($"TryBankWithdrawAllowDebt: {mobUid} has no cached prefs");
+            return false;
+        }
+
+        if (prefs.SelectedCharacter is not HumanoidCharacterProfile profile)
+        {
+            _log.Info($"TryBankWithdrawAllowDebt: {mobUid} has the wrong prefs type");
+            return false;
+        }
+
+        // Allow negative balance (debt)
+        int balance = profile.BankBalance;
+        balance -= amount;
+
+        var newProfile = profile.WithBankBalance(balance);
+        var index = prefs.IndexOfCharacter(profile);
+        if (index == -1)
+        {
+            _log.Info($"TryBankWithdrawAllowDebt: {session.UserId} tried to adjust the balance of {profile.Name}, but they were not in the user's character set.");
+            return false;
+        }
+        _prefsManager.SetProfile(session.UserId, index, newProfile);
+        bank.Balance = balance;
+        Dirty(mobUid, bank);
+        _log.Info($"{mobUid} withdrew {amount} (allowing debt), new balance: {balance}");
+        // Update any active admin UI with new balance
+        RaiseLocalEvent(new BalanceChangedEvent(session, balance));
         return true;
     }
 
