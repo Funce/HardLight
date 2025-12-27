@@ -95,7 +95,6 @@
   - type: SurveillanceCameraSpeaker
   - type: SurveillanceCameraMonitor
   - type: RoboticsConsole
-    allowBorgControl: false
     radioChannel: Xenoborg
   - type: DeviceNetwork
     deviceNetId: Wireless
@@ -258,8 +257,8 @@
   description: View the Xenoborgs Camera Monitor
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-camera }
-    iconOn: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-camera }
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-camera-computer }
+    iconOn: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-camera-computer }
     keywords: [ "Mothership Core", "console", "interface" ]
     priority: -5
     event: !type:ToggleIntrinsicUIEvent { key: enum.SurveillanceCameraMonitorUiKey.Key }

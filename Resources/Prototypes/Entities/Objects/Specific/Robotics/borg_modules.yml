@@ -1331,18 +1331,8 @@
     - state: icon-xenoborg-basic
   - type: ItemBorgModule
     moduleId: Mothership
-    items: []
-    hands:
-    - item: DoorRemoteXenoborg
-    - hand:
-        emptyRepresentative: MMIFilled
-        emptyLabel: borg-slot-brains-empty
-        whitelist:
-          components:
-          - Brain
-          - BorgBrain
-    - hand:
-        emptyRepresentative: XenoborgModuleBasic
+    items:
+    - DoorRemoteXenoborg
         emptyLabel: borg-slot-modules-empty
         whitelist:
           components:
@@ -1375,17 +1365,10 @@
     - state: icon-xenoborg-basic
   - type: ItemBorgModule
     moduleId: XenoborgBasic
-    items: []
-    hands:
-    - hand:
-        emptyRepresentative: BorgModuleConstructionMaterialPlaceholder
-        emptyLabel: borg-slot-construction-empty
-        whitelist:
-          tags:
-          - ConstructionMaterial
-    - item: XenoborgMaterialBag
-    - item: PinpointerMothership
-    - item: HandheldGPSBasic
+    items:
+    - XenoborgMaterialBag
+    - PinpointerMothership
+    - HandheldGPSBasic
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-basic-module }
 
@@ -1508,14 +1491,13 @@
     - state: icon-xenoborg-space-movement
   - type: ItemBorgModule
     moduleId: XenoborgSpaceMovement
-    items: []
-    hands:
-    - item: HandheldGPSBasic
-    - item: HandHeldMassScannerBorg
-    - item: PinpointerMothership
-    - item: HandheldStationMapUnpowered
-    - item: WeaponGrapplingGun
-    - item: JetpackXenoborg
+    items:
+    - HandheldGPSBasic
+    - HandHeldMassScannerBorg
+    - PinpointerMothership
+    - HandheldStationMapUnpowered
+    - WeaponGrapplingGun
+    - JetpackXenoborg
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-space-movement-module }
 

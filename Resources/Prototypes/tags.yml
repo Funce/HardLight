@@ -426,6 +426,9 @@
   id: ConveyorAssembly
 
 - type: Tag
+  id: ConstructionMaterial
+
+- type: Tag
   id: CoreTattoo
 
 - type: Tag
@@ -957,6 +960,9 @@
 
 - type: Tag
   id: MindTransferTarget
+
+- type: Tag
+  id: Multitool
 
 - type: Tag
   id: Mineshaft

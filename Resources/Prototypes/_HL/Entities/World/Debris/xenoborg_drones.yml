@@ -19,7 +19,7 @@
   name: xenoborg drone (lbit)
   components:
   - type: GridSpawner
-    path: /Maps/_HL/Drones/lbit.yml
+    path: /Maps/_HL/drones/lbit.yml
 
 - type: entity
   id: XenoborgDroneLbyte
@@ -27,7 +27,7 @@
   name: xenoborg drone (lbyte)
   components:
   - type: GridSpawner
-    path: /Maps/_HL/Drones/lbyte.yml
+    path: /Maps/_HL/drones/lbyte.yml
 
 - type: entity
   id: XenoborgDroneLgbyte
@@ -35,7 +35,7 @@
   name: xenoborg drone (lgbyte)
   components:
   - type: GridSpawner
-    path: /Maps/_HL/Drones/lgbyte.yml
+    path: /Maps/_HL/drones/lgbyte.yml
 
 - type: entity
   id: XenoborgDroneMbyte
@@ -43,7 +43,7 @@
   name: xenoborg drone (mbyte)
   components:
   - type: GridSpawner
-    path: /Maps/_HL/Drones/mbyte.yml
+    path: /Maps/_HL/drones/mbyte.yml
 
 - type: entity
   id: XenoborgDroneMgbyte
@@ -51,7 +51,7 @@
   name: xenoborg drone (mgbyte)
   components:
   - type: GridSpawner
-    path: /Maps/_HL/Drones/mgbyte.yml
+    path: /Maps/_HL/drones/mgbyte.yml
 
 - type: entity
   id: XenoborgDroneMtbyte
@@ -59,7 +59,7 @@
   name: xenoborg drone (mtbyte)
   components:
   - type: GridSpawner
-    path: /Maps/_HL/Drones/mtbyte.yml
+    path: /Maps/_HL/drones/mtbyte.yml
 
 - type: entity
   id: XenoborgDroneSgbyte
@@ -67,4 +67,4 @@
   name: xenoborg drone (sgbyte)
   components:
   - type: GridSpawner
-    path: /Maps/_HL/Drones/sgbyte.yml
+    path: /Maps/_HL/drones/sgbyte.yml

@@ -1734,7 +1734,6 @@
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
   - type: RoboticsConsole
-    allowBorgControl: false
     radioChannel: Xenoborg
   - type: ActiveRadio
     channels:
