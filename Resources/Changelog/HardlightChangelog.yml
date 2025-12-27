@@ -41,3 +41,9 @@ Entries:
       message: added a mad max reference somewhere in the game
   id: 6
   time: '2025-12-27T08:37:57.0000000+00:00'
+- author: TrylobyteWasTaken
+  changes:
+    - type: Fix
+      message: High-Flow atmos devices now work properly.
+  id: 7
+  time: '2025-12-27T08:38:40.0000000+00:00'
